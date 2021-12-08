@@ -1,0 +1,48 @@
+.topnav {
+    display: block;
+    height: 10vh;
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: $raisin-black;
+
+    &__list {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    &__item {
+        padding: 1rem;
+        margin: auto 2rem;
+
+        animation-name: moveInTop;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-out;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+
+        &--1 {
+            animation-delay: 0.4s;
+        }
+        &--2 {
+            animation-delay: 0.3s;
+        }
+        &--3 {
+            animation-delay: 0.2s;
+        }
+        &--4 {
+            animation-delay: 0.1s;
+        }
+    }
+
+    &__link {
+
+        &:visited, &:link {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

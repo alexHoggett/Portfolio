@@ -1,0 +1,22 @@
+.header {
+    position: relative;
+    font-size: 4rem;
+    height: 100vh;
+
+    &__content{
+        position: relative;
+        padding: 0 10rem;
+    }
+
+    &__btn{
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translateX(-70%);
+
+    }
+
+    &__sketch{
+        
+    }
+}
