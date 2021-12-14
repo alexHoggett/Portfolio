@@ -2,9 +2,7 @@
 
 const allSections = document.querySelector('.section');
 const navLinks = document.querySelector('.topnav__list');
-
-console.log(allSections);
-console.log(navLinks);
+const btnScrollTo = document.querySelector('.btn--scroll-to');
 
 navLinks.addEventListener('click', function(e) {
     e.preventDefault();
@@ -14,4 +12,11 @@ navLinks.addEventListener('click', function(e) {
             behavior: 'smooth'
         });
     }
-})
+});
+
+btnScrollTo.addEventListener('click', function(e) {
+    const section1 = document.querySelector('#section--1');
+    section1.scrollIntoView({
+        behavior: 'smooth'
+    });
+});

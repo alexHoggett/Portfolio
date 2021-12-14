@@ -39,7 +39,8 @@
     }
 
     &__link {
-
+        display: static;
+        
         &:visited, &:link {
             text-decoration: none;
             color: white;

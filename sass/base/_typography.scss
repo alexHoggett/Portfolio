@@ -24,12 +24,13 @@ body {
     &__sub {
         font-weight: 700;
         font-size: 6rem;
-        color: $raisin-black
+        color: $raisin-black;
     }
 
     &__paragraph {
         font-weight: 100;
-        font-size: 3rem;
+        font-size: 2rem;
+        max-width: 50%;
     }
 }
 
@@ -93,4 +94,3 @@ body {
         border-bottom: 2px solid $sunglow;
     }
 }
-  
