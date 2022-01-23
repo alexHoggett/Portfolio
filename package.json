@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio website for Alex Hoggett",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
@@ -10,8 +10,5 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.1"
-  },
-  "dependencies": {
-    "jquery": "^3.6.0"
   }
 }
