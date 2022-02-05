@@ -18,13 +18,13 @@ body {
     &__primary {
         font-weight: 700;
         font-size: 10rem;
-        color: $raisin-black
+        color: var(--raisin-black)
     }
 
     &__sub {
         font-weight: 700;
         font-size: 6rem;
-        color: $raisin-black;
+        color: var(--raisin-black);
     }
 
     &__paragraph {
@@ -73,7 +73,7 @@ body {
         z-index: -1;
         opacity: 0.5;
         transform: scale(1.07, 1.05) skewX(-15deg);
-        background-color: $sunglow;
+        background-color: var(--sunglow);
     }
 }
 
@@ -91,6 +91,6 @@ body {
         z-index: -1;
         border-radius: 600px;
         transform: translateY(-2rem);
-        border-bottom: 2px solid $sunglow;
+        border-bottom: 2px solid var(--sunglow);
     }
 }

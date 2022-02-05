@@ -1,14 +1,17 @@
-// Colours
-$page-background: #333;
+:root {
+    --page-background: #333;
 
-$sidebar-background: rgb(74, 74, 74);
+    --sidebar-background: rgb(74, 74, 74);
 
-$social-icon-red: rgba(244,67,54,1);
-$social-icon-blue: rgba(33,150,243,1);
+    --social-icon-red: rgba(244,67,54,1);
+    --social-icon-blue: rgba(33,150,243,1);
 
-// Potential color scheme
-$flame: #E4572E;
-$blue-green: #17BEBB;
-$sunglow: #FFC914;
-$raisin-black: #2E282A;
-$green: #76B041;
+    // --color-white: rgb(255, 255, 255);
+
+    // Potential color scheme
+    --flame: #E4572E;
+    --blue-green: #17BEBB;
+    --sunglow: #FFC914;
+    --raisin-black: #2E282A;
+    --green: #76B041;
+}
