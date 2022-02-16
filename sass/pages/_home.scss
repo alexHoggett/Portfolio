@@ -1,9 +1,24 @@
 .section{
-    height: 100vh;
-    border: 2px solid white;
+    // min-height: 100vh;
+    // border: 2px solid white;
     font-size: 4rem;
+    padding: 10rem;
+    margin: 5rem auto;
+    // color: var(--raisin-black);
 
     &-about{
         // height: 100vh;
+    }
+
+    &-heading{
+        font-size: 7rem;
+        color: var(--raisin-black);
+    }
+
+    &-education {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // position: relative;
     }
 }

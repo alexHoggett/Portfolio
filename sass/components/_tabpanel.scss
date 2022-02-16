@@ -1,0 +1,110 @@
+.tab-panel {
+
+    &__heading {
+        position: relative;
+        color: var(--raisin-black);
+        font-size: 6rem;
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 9rem;
+        //     left: 3rem;
+        //     height: 40rem;
+        //     width: 2px;
+        //     background-color: var(--raisin-black);
+            
+        // }
+
+        // &::after {
+        //     content: "";
+        //     display: inline-block;
+        //     position: relative;
+        //     top: -8px;
+        //     height: 2px;
+        //     width: 45rem;
+        //     margin-left: 20px;
+        //     background-color: var(--raisin-black);
+        // }
+    }
+
+    &__container {
+        max-width: 90rem;
+        min-width: 70rem;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tabs {
+        flex: 0 0 20%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__button {
+        padding: 1rem;
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: var(--flame);
+        border: none;
+        opacity: 0.75;
+        transition: all 0.3s;
+        width: 15rem;
+
+        &--active {
+            background-color: rgba(var(--sunglow), 0.5);
+        }
+
+        &:hover {
+            background-color: rgba(var(--sunglow), 0.5);
+        }
+    }
+
+    &__content-container {
+        flex: 1;
+        margin-left: 5rem;
+        // overflow: hidden;
+        position: relative;
+    }
+
+    &__content {
+        transition: all 0.1s;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+
+        &--active {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.1s 0.1s;
+        }
+
+        & p {
+            font-size: 2rem;
+        }
+
+        &--header {
+
+        }
+
+        &--1 {
+
+        }
+
+        &--2 {
+            
+        }
+
+        &--3 {
+            
+        }
+
+        &--4 {
+            
+        }
+    }
+}   

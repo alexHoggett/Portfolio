@@ -37,7 +37,7 @@
         </div>
         <nav class="topnav">
             <ul class="topnav__list">
-                <li class="topnav__item topnav__item--1"><a href="#section--1" class="topnav__link icon-3d">𓃉 About</a>
+                <li class="topnav__item topnav__item--1"><a href="#section--1" class="icon-3d topnav__link">𓃉 About</a>
                 </li>
                 <li class="topnav__item topnav__item--2"><a href="#section--2" class="topnav__link icon-3d">𓃊
                         Education</a></li>
@@ -50,8 +50,9 @@
         <div class="header__content">
             <div class="header__content-text">
                 <div class="heading heading__hello">Hello,</div>
-                <div class="heading heading__primary">I'm <span class="highlight">Alex</span></div>
-                <div class="heading heading__sub">A Freelance <span class="highlight">Full Stack</span>
+                <div class="heading heading__primary">I'm <span class="highlight highlight--yellow">Alex</span></div>
+                <div class="heading heading__sub">A Freelance <span class="highlight highlight--yellow">Full
+                        Stack</span>
                     Developer<br>Based in London</div>
                 <p class="heading heading__paragraph">
                     I'm a software developer currently looking for interesting projects with nice people, that have the
@@ -66,25 +67,60 @@
     </header>
     <section class="section section-about" id="section--1">
         <div class="about-container">
-            <div class="title">
-            </div>
+            <h3 class="section-heading"><span class="highlight highlight--yellow">About</span></h3>
 
         </div>
     </section>
     <section class="section section-education" id="section--2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto molestias molestiae sit, eos natus, omnis,
-        debitis non corrupti aliquid perspiciatis quibusdam? Beatae hic repellendus molestias consequatur fuga, placeat
-        explicabo sint.
+        <h3 class="tab-panel__heading"><span class="highlight highlight--yellow">What I've Done</span></h3>
+        <div class="tab-panel__container">
+            <div class="tab-panel__tabs">
+                <button class="tab-panel__button tab-panel__button--active" data-tab="1">Education</button>
+                <button class="tab-panel__button" data-tab="2">Second</button>
+                <button class="tab-panel__button" data-tab="3">Third</button>
+                <button class="tab-panel__button" data-tab="4">Fourth</button>
+            </div>
+            <div class="tab-panel__content-container">
+                <div class="tab-panel__content tab-panel__content--1 tab-panel__content--active">
+                    <h5 class="tab-panel__content--header">Education</h5>
+                    <p>pLorem ipsum dolor sit amet consectetur adipisicing elit. Saepe a ut, possimus fuga earum
+                        autem
+                        excepturi vero harum magni unde nostrum id. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing
+                        elit. Accusantium laboriosam voluptatum voluptatem nihil consequatur debitis perferendis
+                        quod
+                        unde dolor quos, vitae atque sunt vel esse, ad, numquam alias? Labore, ipsa.</p>
+                </div>
+                <div class="tab-panel__content tab-panel__content--2 tab-panel__content--hide">
+                    <h5 class="tab-panel__content--header">Second One</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti saepe magnam excepturi ear
+                        um
+                        nisi
+                        illo, modi.</p>
+                </div>
+                <div class="tab-panel__content tab-panel__content--3 tab-panel__content--hide">
+                    <h5 class="tab-panel__content--header">Third One</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa, commodi nesciunt
+                        exercitationem quo ipsa veniam aliquam accusantium.</p>
+                </div>
+                <div class="tab-panel__content tab-panel__content--4 tab-panel__content--hide">
+                    <h5 class="tab-panel__content--header">Fourth One</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo asperiores qui ut a quibusdam
+                        quam
+                        fugit aspernatur.</p>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section class="section section-projects" id="section--3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quisquam repellat ut velit. Ratione dolor eaque
-        officiis quisquam nam similique omnis ipsam, odio deserunt saepe, labore harum fugit ducimus ullam?
+        <h3 class="section-heading"><span class="highlight highlight--yellow">Projects</span></h3>
     </section>
+
     <section class="section section-contact" id="section--4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore, quam, impedit amet accusamus, dolorum
-        corrupti quibusdam odit explicabo odio similique aliquam! Corporis ullam alias aperiam est quae, doloremque
-        aspernatur!
+        <h3 class="section-heading"><span class="highlight highlight--yellow">Contact</span></h3>
     </section>
+
 </body>
 
 </html>
