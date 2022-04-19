@@ -1,126 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&family=PT+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer src="app.js"></script>
-    <script defer src="mySketch/p5.min.js"></script>
-    <script defer src="mySketch/p5.dom.min.js"></script>
-    <title>Alex Shabib Hoggett</title>
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        >
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet"
+        > 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="js/app.js"></script>
+        <script defer src="js/mySketch/p5.min.js"></script>
+        <script defer src="js/mySketch/p5.dom.min.js"></script>
+        <title>Alex Shabib Hoggett</title>
+    </head>
 <body>
-    <div class="sidebar">
-        <ul class="sidebar__list">
-            <li class="sidebar__item sidebar__item--1"><a href="https://twitter.com/AlexHoggett" target="_blank"
-                    class="fa fa-twitter fa-2x sidebar__link icon-3d"></a></li>
-            <li class="sidebar__item sidebar__item--2"><a href="https://github.com/alexHoggett" target="_blank"
-                    class="fa fa-github fa-2x sidebar__link icon-3d"></a></li>
-            <li class="sidebar__item sidebar__item--3"><a href="https://www.linkedin.com/in/alex-hoggett-7597041b7/"
-                    target="_blank" class="fa fa-linkedin fa-2x sidebar__link icon-3d"></a></li>
-            <li class="sidebar__item sidebar__item--4"><a href="#" target="_blank"
-                    class="fa fa-envelope fa-2x sidebar__link icon-3d"></a></li>
-        </ul>
-    </div>
     <header class="header">
         <div class="header__sketch">
-            <script src="mySketch/sketch.js"></script>
-            <script src="mySketch/agent.js"></script>
+            <script src="js/mySketch/sketch.js"></script>
+            <script src="js/mySketch/agent.js"></script>
         </div>
-        <nav class="topnav">
-            <ul class="topnav__list">
-                <li class="topnav__item topnav__item--1"><a href="#section--1" class="icon-3d topnav__link">𓃉 About</a>
-                </li>
-                <li class="topnav__item topnav__item--2"><a href="#section--2" class="topnav__link icon-3d">𓃊
-                        Education</a></li>
-                <li class="topnav__item topnav__item--3"><a href="#section--3" class="topnav__link icon-3d">𓃋
-                        Projects</a></li>
-                <li class="topnav__item topnav__item--4"><a href="#section--4" class="topnav__link icon-3d">𓃌
-                        Contact</a></li>
+
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__item navbar__item--1"><a href="#section--1" class="navbar__link icon-3d">𓃉 About</a></li>
+                <li class="navbar__item navbar__item--2"><a href="#section--2" class="navbar__link icon-3d">𓃊 Education</a></li>
+                <li class="navbar__item navbar__item--3"><a href="#section--3" class="navbar__link icon-3d">𓃋 Projects</a></li>
+                <li class="navbar__item navbar__item--4"><a href="#section--4" class="navbar__link icon-3d">𓃌 Contact</a></li>
             </ul>
         </nav>
-        <div class="header__content">
-            <div class="header__content-text">
-                <div class="heading heading__hello">Hello,</div>
-                <div class="heading heading__primary">I'm <span class="highlight highlight--yellow">Alex</span></div>
-                <div class="heading heading__sub">A Freelance <span class="highlight highlight--yellow">Full
-                        Stack</span>
-                    Developer<br>Based in London</div>
-                <p class="heading heading__paragraph">
-                    I'm a software developer currently looking for interesting projects with nice people, that have the
-                    intention of using tech for positive social impacts.
-                </p>
-            </div>
-            <div class="header__content-img">
-                <img class="header--img" src="img/sample.png" alt="Alex sitting on a bench whilst smiling">
-            </div>
+
+        <div class="heading">
+            <div class="heading__hello">Hello,</div>
+            <div class="heading__primary">I'm <span class="highlight highlight--yellow">Alex</span></div>
+            <div class="heading__secondary">
+                A Freelance <span class="highlight highlight--yellow">Full Stack</span> Developer<br>Based in London</div>
+            <p class="heading__intro-paragraph">
+                I'm a software developer currently looking for interesting projects with nice people, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        <!-- Might add image here ??? -->
+        <button class="btn btn--text btn--scroll-to">Find out more ↓</button>
         </div>
-        <button class="header__btn btn--text btn--scroll-to">Find out more ↓</button>
+        
+        <div class="sidebar">
+            <ul class="sidebar__list">
+                <li class="sidebar__item sidebar__item--1"><a href="https://twitter.com/AlexHoggett" target="_blank" class="fa fa-twitter fa-2x sidebar__link icon-3d"></a></li>
+                <li class="sidebar__item sidebar__item--2"><a href="https://github.com/alexHoggett" target="_blank" class="fa fa-github fa-2x sidebar__link icon-3d"></a></li>
+                <li class="sidebar__item sidebar__item--3"><a href="https://www.linkedin.com/in/alex-hoggett-7597041b7/" target="_blank" class="fa fa-linkedin fa-2x sidebar__link icon-3d"></a></li>
+                <li class="sidebar__item sidebar__item--4"><a href="#" target="_blank" class="fa fa-envelope fa-2x sidebar__link icon-3d"></a></li>
+            </ul>
+        </div>
     </header>
-    <section class="section section-about" id="section--1">
+
+    <section class="section section--hidden" id="section--1">
+        <h3 class="section-heading section-heading--start"><span class="highlight highlight--yellow">About</span></h3>
         <div class="about-container">
-            <h3 class="section-heading"><span class="highlight highlight--yellow">About</span></h3>
-
-        </div>
-    </section>
-    <section class="section section-education" id="section--2">
-        <h3 class="tab-panel__heading"><span class="highlight highlight--yellow">What I've Done</span></h3>
-        <div class="tab-panel__container">
-            <div class="tab-panel__tabs">
-                <button class="tab-panel__button tab-panel__button--active" data-tab="1">Education</button>
-                <button class="tab-panel__button" data-tab="2">Second</button>
-                <button class="tab-panel__button" data-tab="3">Third</button>
-                <button class="tab-panel__button" data-tab="4">Fourth</button>
+            <div class="about-me__text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi dignissimos consequatur autem aliquid quibusdam accusantium suscipit quasi sint reprehenderit sed explicabo deleniti, veritatis molestias officia adipisci qui quaerat, expedita placeat?</p><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fugit iusto sunt, autem ipsum assumenda nesciunt tempora necessitatibus maiores similique vero deleniti optio natus cupiditate eius, qui eum facere. Aperiam?</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate aperiam blanditiis, nihil optio maxime illum dolore consequatur perferendis harum animi unde recusandae, a exercitationem quas illo dignissimos dolorum. Qui, facilis.</p>
             </div>
-            <div class="tab-panel__content-container">
-                <div class="tab-panel__content tab-panel__content--1 tab-panel__content--active">
-                    <h5 class="tab-panel__content--header">Education</h5>
-                    <p>pLorem ipsum dolor sit amet consectetur adipisicing elit. Saepe a ut, possimus fuga earum
-                        autem
-                        excepturi vero harum magni unde nostrum id. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing
-                        elit. Accusantium laboriosam voluptatum voluptatem nihil consequatur debitis perferendis
-                        quod
-                        unde dolor quos, vitae atque sunt vel esse, ad, numquam alias? Labore, ipsa.</p>
+            <div class="about-me__img-container">
+                <img class="about-me__img" src="./img/me.jpeg" alt="Alex sat on a bench">
+            </div>
+        </div>
+        <h4 class="sub-heading"><span class="highlight highlight--yellow">Currently most interested in</span></h4>
+        <div class="cards-container">
+            <div class="card__wrapper">
+                <div class="card card--1">
+                    <img class="card__icon" src="./img/javascript.svg">
+                    <p class="card__text">Javascript</p>
                 </div>
-                <div class="tab-panel__content tab-panel__content--2 tab-panel__content--hide">
-                    <h5 class="tab-panel__content--header">Second One</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti saepe magnam excepturi ear
-                        um
-                        nisi
-                        illo, modi.</p>
+              </div>
+            
+            <div class="card__wrapper">
+                <div class="card card--2">
+                    <img class="card__icon" src="./img/react.svg">
+                    <p class="card__text">React</p>
                 </div>
-                <div class="tab-panel__content tab-panel__content--3 tab-panel__content--hide">
-                    <h5 class="tab-panel__content--header">Third One</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa, commodi nesciunt
-                        exercitationem quo ipsa veniam aliquam accusantium.</p>
+            </div>
+            
+            <div class="card__wrapper">
+                <div class="card card--3">
+                    <img class="card__icon" src="./img/nodejs.svg">
+                    <p class="card__text">Node.js</p>
                 </div>
-                <div class="tab-panel__content tab-panel__content--4 tab-panel__content--hide">
-                    <h5 class="tab-panel__content--header">Fourth One</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo asperiores qui ut a quibusdam
-                        quam
-                        fugit aspernatur.</p>
+            </div>
+
+            <div class="card__wrapper">
+                <div class="card card--3">
+                    <img class="card__icon" src="./img/wordpress.svg">
+                    <p class="card__text">Wordpress</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-projects" id="section--3">
+    <section class="section section--hidden" id="section--2">
+        <h3 class="section-heading section-heading--end"><span class="highlight highlight--yellow">Education</span></h3>
+
+        <div class="timeline">
+            <div class="timeline__tab-container">
+                <button class="timeline__tab timeline__tab--1 timeline__tab--active">2016</button>
+                <button class="timeline__tab timeline__tab--2">2017-2020</button>
+                <button class="timeline__tab timeline__tab--3">2021</button>
+                <button class="timeline__tab timeline__tab--4">2022</button>
+                <div class="timeline__tab-indicator"></div>
+            </div>
+            <div class="timeline__tab-content timeline__tab-content--1 timeline__tab-content--active">
+                <p>content 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere consequuntur iusto similique officia? Dignissimos quidem,</p>
+                <p>non illum consequatur, maiores eveniet porro quae consequuntur totam dolor a eligendi cupiditate nam? Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                <p>Autem illo iusto eius, laboriosam reprehenderit saepe totam vitae necessitatibus commodi sunt id accusamus possimus dolorum in praesentium, corrupti deserunt, sequi cum.</p>
+                <p>hello</p>
+                <p>hello</p><p>hello</p><p>hello</p><p>hello</p><p>hello</p><p>hello</p>
+            </div>
+            <div class="timeline__tab-content timeline__tab-content--2">
+                <p>content 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere consequuntur iusto similique officia? Dignissimos quidem,</p>
+                <p>non illum consequatur, maiores eveniet porro quae consequuntur totam dolor a eligendi cupiditate nam? Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                <p>Autem illo iusto eius, laboriosam reprehenderit saepe totam vitae necessitatibus commodi sunt id accusamus possimus dolorum in praesentium, corrupti deserunt, sequi cum.</p>
+            </div>
+            <div class="timeline__tab-content timeline__tab-content--3">
+                <p>content 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere consequuntur iusto similique officia? Dignissimos quidem,</p>
+                <p>non illum consequatur, maiores eveniet porro quae consequuntur totam dolor a eligendi cupiditate nam? Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                <p>Autem illo iusto eius, laboriosam reprehenderit saepe totam vitae necessitatibus commodi sunt id accusamus possimus dolorum in praesentium, corrupti deserunt, sequi cum.</p>
+            </div>
+            <div class="timeline__tab-content timeline__tab-content--4">
+                <p>content 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere consequuntur iusto similique officia? Dignissimos quidem,</p>
+                <p>non illum consequatur, maiores eveniet porro quae consequuntur totam dolor a eligendi cupiditate nam? Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                <p>Autem illo iusto eius, laboriosam reprehenderit saepe totam vitae necessitatibus commodi sunt id accusamus possimus dolorum in praesentium, corrupti deserunt, sequi cum.</p>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section section--hidden" id="section--3">
         <h3 class="section-heading"><span class="highlight highlight--yellow">Projects</span></h3>
+
+        <div class="projects">
+            <div class="project">
+                <img src="img/github.svg" alt="Github logo" class="project__git">
+                <div class="project__title">Natours</div>
+                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">CSS</div>
+                    <div class="project__tech-item">HTML</div>
+                    <div class="project__tech-item">SASS</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/github.svg" alt="Github logo" class="project__git">
+                <div class="project__title">Natours</div>
+                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">CSS</div>
+                    <div class="project__tech-item">HTML</div>
+                    <div class="project__tech-item">SASS</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/github.svg" alt="Github logo" class="project__git">
+                <div class="project__title">Natours</div>
+                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">CSS</div>
+                    <div class="project__tech-item">HTML</div>
+                    <div class="project__tech-item">SASS</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/github.svg" alt="Github logo" class="project__git">
+                <div class="project__title">Natours</div>
+                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">CSS</div>
+                    <div class="project__tech-item">HTML</div>
+                    <div class="project__tech-item">SASS</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/github.svg" alt="Github logo" class="project__git">
+                <div class="project__title">Natours</div>
+                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">CSS</div>
+                    <div class="project__tech-item">HTML</div>
+                    <div class="project__tech-item">SASS</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/github.svg" alt="Github logo" class="project__git">
+                <div class="project__title">Natours</div>
+                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">CSS</div>
+                    <div class="project__tech-item">HTML</div>
+                    <div class="project__tech-item">SASS</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section section-contact" id="section--4">
-        <h3 class="section-heading"><span class="highlight highlight--yellow">Contact</span></h3>
+    <section class="section" id="section--4">
+        <h3 class="section-heading section-heading--end"><span class="highlight highlight--yellow">Contact</span></h3>
+        <div class="contact">
+            <div class="contact__title">Want to get in touch?</div>
+            <div class="contact__info">I'm always looking for Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus iste debitis obcaecati similique assumenda commodi nihil sapiente est.</div>
+            <button class="contact__btn btn btn--text">Send me an email</button>
+        </div>
     </section>
-
 </body>
-
 </html>

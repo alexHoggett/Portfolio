@@ -1,0 +1,46 @@
+:root {
+  --page-background: #333;
+
+  --sidebar-background: rgb(74, 74, 74);
+
+  --social-icon-red: rgba(244, 67, 54, 1);
+  --social-icon-blue: rgba(33, 150, 243, 1);
+
+  // --color-white: rgb(255, 255, 255);
+
+  // Potential color scheme
+  --flame: #e4572e;
+  --blue-green: #17bebb;
+  --sunglow: #ffc914;
+  --sunglow-rgb: 255, 201, 20;
+  --raisin-black: #2e282a;
+  --raisin-black-light: #201d1e;
+  --green: #76b041;
+  --white: rgba(236, 232, 232, 0.664);
+}
+
+* {
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--flame);
+  padding: 1rem 6rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+p {
+  color: var(--raisin-black);
+}

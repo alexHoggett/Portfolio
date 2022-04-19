@@ -1,16 +1,5 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
-
-@import "components/sidebar";
-@import "components/topnav";
-@import "components/tabpanel";
-
-@import "layout/header";
-
-@import "pages/home";
+@import "base";
+@import "layout";
+@import "components";
+@import "animations";
+@import "utilities";
