@@ -1,5 +1,3 @@
-'use strict';
-
 const allSections = document.querySelectorAll('.section');
 const navLinks = document.querySelector('.navbar__list');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
