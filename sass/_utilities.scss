@@ -16,16 +16,16 @@
   }
 
   &--yellow::after {
-    background-color: var(--sunglow);
+    background-color: var(--color-sunglow);
   }
 
   &--blue::after {
-    background-color: var(--blue-green);
+    background-color: var(--color-blue-green);
     opacity: 1;
   }
 
   &--green::after {
-    background-color: var(--green);
+    background-color: var(--color-green);
     opacity: 0.7;
   }
 }

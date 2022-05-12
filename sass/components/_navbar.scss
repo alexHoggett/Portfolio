@@ -6,19 +6,17 @@
   font-size: 2rem;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  color: var(--raisin-black);
+  color: var(--color-raisin-black);
 
   &__logo {
-    background-color: var(--white);
+    // background-color: white;
     position: relative;
+    width: 14rem;
+    height: 100%;
     z-index: 20;
-    &-img {
-      width: 14rem;
-      height: 100%;
-    }
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: $bp-navbar) {
     justify-content: space-between;
   }
 
@@ -36,10 +34,10 @@
     flex: 1;
 
     @media only screen and (max-width: 800px) {
-      justify-content: center;
+      justify-content: space-evenly;
     }
 
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: $bp-navbar) {
       // turn into sliding burger nav
       position: fixed;
       top: 0;
@@ -63,6 +61,7 @@
     display: grid;
     padding: 1rem;
     margin: auto 2rem;
+    position: relative;
 
     animation-name: moveInTop;
     animation-duration: 0.4s;
@@ -70,26 +69,61 @@
     visibility: hidden;
     animation-fill-mode: forwards;
 
+    &::before {
+      position: absolute;
+      color: white;
+      left: -5%;
+      top: 20%;
+
+      @media only screen and (max-width: $bp-medium) {
+        left: -12%;
+        top: 9%;
+      }
+    }
+
     @media only screen and (max-width: 800px) {
       margin: auto 1rem;
       padding: 0;
     }
 
-    @media only screen and (max-width: 500px) {
-      margin: 0;
+    @media only screen and (max-width: $bp-navbar) {
+      margin: 3rem 0;
     }
 
     &--1 {
       animation-delay: 0.4s;
+
+      &::before {
+        content: "𓃉";
+        top: 15%;
+        left: 0%;
+
+        @media only screen and (max-width: $bp-medium) {
+          top: 5% !important;
+        }
+      }
     }
     &--2 {
       animation-delay: 0.3s;
+
+      &::before {
+        content: "𓃊";
+        left: 0%;
+      }
     }
     &--3 {
       animation-delay: 0.2s;
+
+      &::before {
+        content: "𓃋";
+      }
     }
     &--4 {
       animation-delay: 0.1s;
+
+      &::before {
+        content: "𓃌";
+      }
     }
   }
 
@@ -109,12 +143,12 @@
     border-radius: 4px;
     z-index: 12;
 
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: $bp-navbar) {
       display: inline-block;
     }
 
     &-icon {
-      @include burger(30px, 3px, 6px, var(--raisin-black));
+      @include burger(30px, 3px, 6px, var(--color-raisin-black-light));
       position: absolute;
       top: 50%;
       left: 50%;
@@ -144,13 +178,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--color-raisin-black-light);
     z-index: -10;
     opacity: 0;
     transition: all 0.3s ease-in-out;
     visibility: hidden;
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: $bp-navbar) {
       transition: all 0s;
     }
 
@@ -159,7 +193,7 @@
       opacity: 1;
       visibility: visible;
 
-      @media only screen and (min-width: 576px) {
+      @media only screen and (min-width: $bp-navbar) {
         visibility: hidden;
       }
     }

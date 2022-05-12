@@ -1,5 +1,5 @@
 const allSections = document.querySelectorAll('.section');
-const navLinks = document.querySelector('.navbar__list');
+const navList = document.querySelector('.navbar__list');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 
 const tabs = document.querySelectorAll('.timeline__tab');
@@ -9,13 +9,16 @@ const indicator = document.querySelector('.timeline__tab-indicator');
 const burger = document.querySelector('.navbar__burger');
 const overlay = document.querySelector('.navbar__overlay')
 
-navLinks.addEventListener('click', function (e) {
+navList.addEventListener('click', function (e) {
     e.preventDefault();
 
     if (e.target.classList.contains('navbar__link')) {
         document.querySelector(e.target.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+          behavior: 'smooth'
         });
+         if (burger.classList.contains('navbar__burger--active')){
+           burgerToggles();
+         }
     }
 });
 
@@ -27,13 +30,20 @@ btnScrollTo.addEventListener('click', function (e) {
 });
 
 
+// Functionality for burger
 
-burger.addEventListener('click', (e) => {
+function burgerToggles(){
   burger.classList.toggle('navbar__burger--active');
   overlay.classList.toggle('navbar__overlay--active');
   document.body.classList.toggle('no-scroll');
-  navLinks.classList.toggle('navbar__list--active');
+  navList.classList.toggle('navbar__list--active');
+}
+
+burger.addEventListener('click', (e) => {
+  burgerToggles();
 })
+
+
 
 // ///// ///// ///// ///// ///// ///// ///// ///
 // /// Revealing Sections on Scroll

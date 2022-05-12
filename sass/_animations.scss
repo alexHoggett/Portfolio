@@ -1,18 +1,19 @@
 @keyframes icon3d {
   0% {
-    text-shadow: 5px 4px var(--sunglow), -5px -6px var(--blue-green);
+    text-shadow: 5px 4px var(--color-sunglow), -5px -6px var(--color-blue-green);
   }
   25% {
-    text-shadow: -5px -6px var(--sunglow), 5px 4px var(--blue-green);
+    text-shadow: -5px -6px var(--color-sunglow), 5px 4px var(--color-blue-green);
   }
   50% {
-    text-shadow: 5px -4px var(--sunglow), -8px 4px var(--blue-green);
+    text-shadow: 5px -4px var(--color-sunglow), -8px 4px var(--color-blue-green);
   }
   75% {
-    text-shadow: -8px -4px var(--sunglow), -5px -4px var(--blue-green);
+    text-shadow: -8px -4px var(--color-sunglow),
+      -5px -4px var(--color-blue-green);
   }
   100% {
-    text-shadow: -5px 0 var(--sunglow), 5px -4px var(--blue-green);
+    text-shadow: -5px 0 var(--color-sunglow), 5px -4px var(--color-blue-green);
   }
 }
 

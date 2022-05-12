@@ -1,18 +1,13 @@
 :root {
-  --social-icon-red: rgba(244, 67, 54, 1);
-  --social-icon-blue: rgba(33, 150, 243, 1);
-
-  // --color-white: rgb(255, 255, 255);
-
   // Potential color scheme
-  --flame: #e4572e;
-  --blue-green: #17bebb;
-  --sunglow: #ffc914;
-  --sunglow-rgb: 255, 201, 20;
-  --raisin-black: #2e282a;
-  --raisin-black-light: #201d1e;
-  --green: #76b041;
-  --white: rgba(236, 232, 232, 0.664);
+  --color-flame: #e4572e;
+  --color-blue-green: #17bebb;
+  --color-sunglow: #ffc914;
+  --color-sunglow-rgb: 255, 201, 20;
+  --color-raisin-black: #2e282a;
+  --color-raisin-black-light: #201d1e;
+  --color-green: #76b041;
+  --color-white: rgba(236, 232, 232, 0.664);
 }
 
 // RESPONSIVE BREAKPOINTS
@@ -22,6 +17,8 @@ $bp-850: 53.125em; // 850px
 $bp-medium: 50em; // 800px
 $bp-700: 43.75em; // 700px
 $bp-small: 37.5em; // 600px
+
+$bp-navbar: 576px;
 
 *,
 *::after,
@@ -49,11 +46,15 @@ html {
 }
 
 body {
-  background-color: var(--flame);
+  background-color: var(--color-flame);
   padding: 1rem 6rem;
   font-family: "Nunito Sans", sans-serif;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 1rem 3rem;
+  }
 }
 
 p {
-  color: var(--raisin-black);
+  color: var(--color-raisin-black);
 }
