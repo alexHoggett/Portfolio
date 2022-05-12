@@ -16,20 +16,45 @@
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   min-height: 90%;
+  width: 100%;
 
   &__hello {
     font-size: 3rem;
     font-weight: 600;
+
+    @media only screen and (max-width: 850px) {
+      font-size: 2.8rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.8rem;
+    }
   }
 
   &__primary {
     font-weight: 700;
     font-size: 10rem;
+
+    @media only screen and (max-width: 850px) {
+      font-size: 9rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 9rem;
+    }
   }
 
   &__secondary {
     font-weight: 700;
     font-size: 6rem;
+
+    @media only screen and (max-width: 850px) {
+      font-size: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 5rem;
+    }
   }
 
   &__intro-paragraph {
@@ -37,6 +62,14 @@
     font-size: 2rem;
     max-width: 50%;
     opacity: 1;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   & button {
@@ -51,114 +84,9 @@
 // ///  NAVBAR
 // ///// ///// ///// ///// ///// ///// ///// ///// ///
 
-.navbar {
-  display: block;
-  height: 10vh;
-  font-size: 2rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 800;
-  color: var(--raisin-black);
-
-  &__list {
-    list-style: none;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-  }
-
-  &__item {
-    display: grid;
-    padding: 1rem;
-    margin: auto 2rem;
-
-    animation-name: moveInTop;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-out;
-    visibility: hidden;
-    animation-fill-mode: forwards;
-
-    &--1 {
-      animation-delay: 0.4s;
-    }
-    &--2 {
-      animation-delay: 0.3s;
-    }
-    &--3 {
-      animation-delay: 0.2s;
-    }
-    &--4 {
-      animation-delay: 0.1s;
-    }
-  }
-
-  &__link {
-    &:visited,
-    &:link {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
-
 // ///// ///// ///// ///// ///// ///// ///// ///// ///
 // ///  SIDEBAR
 // ///// ///// ///// ///// ///// ///// ///// ///// ///
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 6rem;
-  height: 100vh;
-  z-index: 100;
-
-  &__list {
-    height: 100%;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    list-style: none;
-  }
-
-  &__item {
-    display: grid;
-    padding: 1rem;
-
-    animation-name: moveInLeft;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-out;
-    visibility: hidden;
-    animation-fill-mode: forwards;
-
-    &--1 {
-      animation-delay: 1s;
-    }
-
-    &--2 {
-      animation-delay: 0.9s;
-    }
-
-    &--3 {
-      animation-delay: 0.8s;
-    }
-
-    &--4 {
-      animation-delay: 0.7s;
-    }
-  }
-
-  &__link {
-    margin: auto;
-
-    &:visited,
-    &:link {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///
 // ///  BUTTON (&& KINDA LINKS)

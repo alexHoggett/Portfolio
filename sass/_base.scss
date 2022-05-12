@@ -1,8 +1,4 @@
 :root {
-  --page-background: #333;
-
-  --sidebar-background: rgb(74, 74, 74);
-
   --social-icon-red: rgba(244, 67, 54, 1);
   --social-icon-blue: rgba(33, 150, 243, 1);
 
@@ -19,8 +15,13 @@
   --white: rgba(236, 232, 232, 0.664);
 }
 
-* {
-}
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-850: 53.125em; // 850px
+$bp-medium: 50em; // 800px
+$bp-700: 43.75em; // 700px
+$bp-small: 37.5em; // 600px
 
 *,
 *::after,
@@ -33,6 +34,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+
+  // @media only screen and (max-width: $bp-700) {
+  //   font-size: 50%;
+  // }
+
+  // @media only screen and (max-width: $bp-small) {
+  //   font-size: 40%;
+  // }
 }
 
 body {

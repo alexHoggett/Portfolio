@@ -6,6 +6,8 @@ const tabs = document.querySelectorAll('.timeline__tab');
 const tabsContainer = document.querySelector('.timeline__tab-container');
 const tabsContent = document.querySelectorAll('.timeline__tab-content');
 const indicator = document.querySelector('.timeline__tab-indicator');
+const burger = document.querySelector('.navbar__burger');
+const overlay = document.querySelector('.navbar__overlay')
 
 navLinks.addEventListener('click', function (e) {
     e.preventDefault();
@@ -23,6 +25,15 @@ btnScrollTo.addEventListener('click', function (e) {
         behavior: 'smooth'
     });
 });
+
+
+
+burger.addEventListener('click', (e) => {
+  burger.classList.toggle('navbar__burger--active');
+  overlay.classList.toggle('navbar__overlay--active');
+  document.body.classList.toggle('no-scroll');
+  navLinks.classList.toggle('navbar__list--active');
+})
 
 // ///// ///// ///// ///// ///// ///// ///// ///
 // /// Revealing Sections on Scroll

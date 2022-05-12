@@ -1,0 +1,30 @@
+.btn {
+  &--text {
+    display: inline-block;
+    background: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--raisin-black);
+    border: none;
+    // border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    cursor: pointer;
+    // transition: all 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 1px;
+      border-radius: 5px;
+      position: relative;
+      background-color: var(--green);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover::after {
+      width: 92%;
+    }
+  }
+}

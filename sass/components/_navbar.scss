@@ -1,0 +1,167 @@
+// break at 576px
+
+.navbar {
+  display: flex;
+  height: 10vh;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: var(--raisin-black);
+
+  &__logo {
+    background-color: var(--white);
+    position: relative;
+    z-index: 20;
+    &-img {
+      width: 14rem;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2.2rem;
+  }
+
+  &__list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    transition: all 0.3s;
+    flex: 1;
+
+    @media only screen and (max-width: 800px) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: 576px) {
+      // turn into sliding burger nav
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 12;
+    }
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    display: grid;
+    padding: 1rem;
+    margin: auto 2rem;
+
+    animation-name: moveInTop;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+    @media only screen and (max-width: 800px) {
+      margin: auto 1rem;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin: 0;
+    }
+
+    &--1 {
+      animation-delay: 0.4s;
+    }
+    &--2 {
+      animation-delay: 0.3s;
+    }
+    &--3 {
+      animation-delay: 0.2s;
+    }
+    &--4 {
+      animation-delay: 0.1s;
+    }
+  }
+
+  &__link {
+    &:visited,
+    &:link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 4px;
+    z-index: 12;
+
+    @media only screen and (max-width: 576px) {
+      display: inline-block;
+    }
+
+    &-icon {
+      @include burger(30px, 3px, 6px, var(--raisin-black));
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: (-50%, -50%);
+      margin-left: -15px;
+      margin-top: -1.5px;
+    }
+
+    &--active {
+      div {
+        @include burger-to-cross;
+        &:before,
+        &:after {
+          background-color: white;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -10;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+
+    @media only screen and (min-width: 576px) {
+      transition: all 0s;
+    }
+
+    &--active {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+
+      @media only screen and (min-width: 576px) {
+        visibility: hidden;
+      }
+    }
+  }
+}
