@@ -4,7 +4,7 @@
 
 .cards-container {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
@@ -19,7 +19,7 @@
   width: 25rem;
   height: 25rem;
   border: 1px solid var(--color-raisin-black);
-  // border-radius: 1.6rem;
+  border-radius: 1rem;
   padding: 4rem;
 
   display: flex;
@@ -32,6 +32,17 @@
   background-color: var(--color-white);
   box-shadow: 0 0 3rem 0.5rem rgba(0, 0, 0, 0.2);
   transition: transform 0.6s 1s;
+
+  @media only screen and (max-width: 1155px) {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  @media only screen and (max-width: 674px) {
+    width: 12rem;
+    height: 12rem;
+    justify-content: center;
+  }
 
   &::before,
   &::after {
@@ -69,6 +80,10 @@
     transform: perspective(100rem);
     cursor: pointer;
 
+    @media only screen and (max-width: 512px) {
+      margin: 0.5rem;
+    }
+
     &:hover .card::before,
     &:hover .card::after {
       width: calc(100% - 4rem);
@@ -80,6 +95,16 @@
     width: 13rem;
     height: 13rem;
     fill: white;
+
+    @media only screen and (max-width: 1155px) {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    @media only screen and (max-width: 674px) {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
   }
 
   &--active {
@@ -89,6 +114,14 @@
   &__text {
     color: var(--color-raisin-black);
     font-size: 2.2rem;
+
+    @media only screen and (max-width: 1155px) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: 674px) {
+      display: none;
+    }
   }
 }
 

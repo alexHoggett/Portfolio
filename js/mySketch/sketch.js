@@ -17,7 +17,7 @@ function setup() {
     let myWidth = windowWidth; // a quick fix here, clientWidth was offsetting the canvas
     canvas = createCanvas(myWidth, myHeight);
     canvas.position(0, 0);
-    canvas.style("z-index", "-2");
+    canvas.style("z-index", "-200");
     canvas.style("position", "absolute");
     canvas.elt.style.position = "fixed";
     background('#E4572E');

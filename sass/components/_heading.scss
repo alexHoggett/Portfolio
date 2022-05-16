@@ -22,16 +22,20 @@
     font-size: 3rem;
     font-weight: 600;
 
-    @media only screen and (max-width: 800px) {
-      font-size: 5rem;
-    }
-
     @media only screen and (max-width: 850px) {
       font-size: 2.8rem;
     }
 
+    @media only screen and (max-width: 800px) {
+      font-size: 4rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
       font-size: 2.8rem;
+    }
+
+    @media only screen and (max-width: 444px) {
+      font-size: 2.2rem;
     }
   }
 
@@ -43,8 +47,16 @@
       font-size: 9rem;
     }
 
+    @media only screen and (max-width: 800px) {
+      font-size: 10rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
       font-size: 9rem;
+    }
+
+    @media only screen and (max-width: 444px) {
+      font-size: 7rem;
     }
   }
 
@@ -56,8 +68,16 @@
       font-size: 5rem;
     }
 
+    @media only screen and (max-width: 800px) {
+      font-size: 6rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
       font-size: 5rem;
+    }
+
+    @media only screen and (max-width: 444px) {
+      font-size: 3.5rem;
     }
   }
 
@@ -71,8 +91,16 @@
       font-size: 1.8rem;
     }
 
+    @media only screen and (max-width: 800px) {
+      font-size: 2rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: 444px) {
+      font-size: 1.6rem;
     }
   }
 
