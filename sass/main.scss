@@ -1,11 +1,12 @@
 @import "base";
 @import "utilities";
 @import "animations";
+@import "layout";
 
 @import "components/sidebar";
 @import "components/burger";
 @import "components/navbar";
 @import "components/button";
-
-@import "layout";
-@import "components";
+@import "components/cards";
+@import "components/projects";
+@import "components/heading";
