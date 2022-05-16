@@ -6,6 +6,18 @@
   height: 100vh;
   z-index: 100;
 
+  @media only screen and (max-width: $bp-navbar) {
+    bottom: 0;
+    top: 80%;
+    width: 100%;
+    height: 20vh;
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+
   &__list {
     height: 100%;
     font-size: 1.2rem;
@@ -13,6 +25,11 @@
     flex-direction: column;
     justify-content: flex-end;
     list-style: none;
+
+    @media only screen and (max-width: $bp-navbar) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   &__item {
@@ -24,6 +41,11 @@
     animation-timing-function: ease-out;
     visibility: hidden;
     animation-fill-mode: forwards;
+
+    @media only screen and (max-width: $bp-navbar) {
+      animation-name: moveInBottom;
+      font-size: 2rem;
+    }
 
     &--1 {
       animation-delay: 1s;

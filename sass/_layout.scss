@@ -1,6 +1,14 @@
 .header {
   position: relative;
   min-height: 100vh;
+
+  &__sketch {
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+  }
 }
 
 .section {

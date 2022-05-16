@@ -7,7 +7,8 @@ const tabsContainer = document.querySelector('.timeline__tab-container');
 const tabsContent = document.querySelectorAll('.timeline__tab-content');
 const indicator = document.querySelector('.timeline__tab-indicator');
 const burger = document.querySelector('.navbar__burger');
-const overlay = document.querySelector('.navbar__overlay')
+const overlay = document.querySelector('.navbar__overlay');
+const sidebar = document.querySelector('.sidebar');
 
 navList.addEventListener('click', function (e) {
     e.preventDefault();
@@ -37,6 +38,7 @@ function burgerToggles(){
   overlay.classList.toggle('navbar__overlay--active');
   document.body.classList.toggle('no-scroll');
   navList.classList.toggle('navbar__list--active');
+  sidebar.classList.toggle('sidebar--active');
 }
 
 burger.addEventListener('click', (e) => {

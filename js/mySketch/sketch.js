@@ -12,13 +12,14 @@ var alignRadius = 60;//40
 var alignStrength = 0.1;//0.01
 
 function setup() {
-    let myContainer = document.querySelector('.header');
+    let myContainer = document.querySelector('.header__sketch');
     let myHeight = myContainer.clientHeight;
     let myWidth = windowWidth; // a quick fix here, clientWidth was offsetting the canvas
     canvas = createCanvas(myWidth, myHeight);
     canvas.position(0, 0);
     canvas.style("z-index", "-2");
-    canvas.style("position", "fixed");
+    canvas.style("position", "absolute");
+    canvas.elt.style.position = "fixed";
     background('#E4572E');
 
     // Create agents
