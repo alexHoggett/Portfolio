@@ -1,12 +1,19 @@
 // break at 576px
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
-  height: 10vh;
+  height: 6vh;
   font-size: 2rem;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   color: var(--color-raisin-black);
+  background-color: rgba(var(--color-flame-rgb), 0.8);
+  transition: all 0.3s;
+  z-index: 100;
 
   &__logo {
     // background-color: white;
@@ -18,6 +25,8 @@
 
   @media only screen and (max-width: $bp-navbar) {
     justify-content: space-between;
+    background-color: transparent;
+    position: static;
   }
 
   @media only screen and (max-width: 800px) {

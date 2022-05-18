@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
   --color-flame: #e4572e;
+  --color-flame-rgb: 228, 87, 46;
   --color-blue-green: #17bebb;
   --color-sunglow: #ffc914;
   --color-sunglow-rgb: 255, 201, 20;
@@ -328,12 +329,19 @@ p {
       color: white; }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
-  height: 10vh;
+  height: 6vh;
   font-size: 2rem;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  color: var(--color-raisin-black); }
+  color: var(--color-raisin-black);
+  background-color: rgba(var(--color-flame-rgb), 0.8);
+  transition: all 0.3s;
+  z-index: 100; }
   .navbar__logo {
     position: relative;
     width: 14rem;
@@ -341,7 +349,9 @@ p {
     z-index: 20; }
   @media only screen and (max-width: 576px) {
     .navbar {
-      justify-content: space-between; } }
+      justify-content: space-between;
+      background-color: transparent;
+      position: static; } }
   @media only screen and (max-width: 800px) {
     .navbar {
       font-size: 2.2rem; } }
@@ -807,7 +817,8 @@ p {
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   min-height: 90%;
-  width: 100%; }
+  width: 100%;
+  margin-top: 2rem; }
   .heading__hello {
     font-size: 3rem;
     font-weight: 600; }
@@ -875,3 +886,6 @@ p {
     left: 50%;
     top: 90%;
     transform: translateX(-70%); }
+    @media only screen and (max-width: 343px) {
+      .heading button {
+        top: 100%; } }

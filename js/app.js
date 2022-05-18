@@ -1,5 +1,6 @@
 const allSections = document.querySelectorAll('.section');
 const navList = document.querySelector('.navbar__list');
+const navbar = document.querySelector('.navbar');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 
 const tabs = document.querySelectorAll('.timeline__tab');
@@ -184,4 +185,16 @@ cards.forEach(card => {
         element: card,
         tiltEffect: 'reverse'
     })
+});
+
+let lastScrollTop;
+window.addEventListener('scroll', function(){
+  let scrollTop = window.pageYOffset ||
+  this.document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop){
+    navbar.style.top = '-10rem';
+  } else {
+    navbar.style.top = '0';
+  }
+  lastScrollTop = scrollTop;
 });

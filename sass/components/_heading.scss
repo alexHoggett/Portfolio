@@ -17,6 +17,7 @@
   animation-fill-mode: forwards;
   min-height: 90%;
   width: 100%;
+  margin-top: 2rem;
 
   &__hello {
     font-size: 3rem;
@@ -109,5 +110,9 @@
     left: 50%;
     top: 90%;
     transform: translateX(-70%);
+
+    @media only screen and (max-width: 343px) {
+      top: 100%;
+    }
   }
 }
