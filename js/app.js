@@ -85,14 +85,15 @@ tabs.forEach(tab => {
     const tabIndex = Array.prototype.indexOf.call(tab.parentNode.children, tab);
 
     const indicatorWidth = getComputedStyle(indicator).getPropertyValue('width');
-    console.log(indicatorWidth);
-
-    indicator.style.transform = `skewX(15deg) translate3d(calc( ${indicatorWidth} * ${tabIndex} ), 0, 0)`;
+    indicator.style.transform = `skewX(15deg) translateX(calc( ${indicatorWidth} * ${tabIndex} ))`;
     indicator.style.width = `calc(${indicatorWidth} + 2%)`;
     setTimeout(() => {
       indicator.style.width = indicatorWidth
     }, 100);
 
+    // change content
+    document.querySelector('.timeline__tab-content--active').classList.remove('timeline__tab-content--active');
+    document.querySelector(`.timeline__tab-content--${tabIndex + 1}`).classList.add('timeline__tab-content--active');
   })
 })
 

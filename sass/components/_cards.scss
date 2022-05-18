@@ -38,6 +38,11 @@
     height: 16rem;
   }
 
+  @media only screen and (max-width: 850px) {
+    width: 15rem;
+    height: 15rem;
+  }
+
   @media only screen and (max-width: 674px) {
     width: 12rem;
     height: 12rem;
@@ -121,111 +126,6 @@
 
     @media only screen and (max-width: 674px) {
       display: none;
-    }
-  }
-}
-
-.timeline {
-  margin-top: 3rem;
-
-  &__tab-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    // margin: 4rem 0rem;
-    position: relative;
-  }
-
-  &__tab-indicator {
-    display: block;
-    position: absolute;
-    width: 25%;
-    background-color: var(--color-raisin-black) !important;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    transition: transform 0.5s cubic-bezier(0.17, 0.8, 0.33, 0.99),
-      width 0.5s linear;
-    z-index: -1;
-    // border-radius: 25px;
-    transform: skewX(15deg);
-    box-shadow: 0 10px 30px 0 rgba(43, 44, 51, 0.15);
-  }
-
-  &__tab {
-    margin: 2rem 2rem;
-    display: inline-block;
-    font-size: 2.5rem;
-    font-family: inherit;
-    font-weight: 400;
-    border: none;
-    padding: 1.25rem 4.5rem;
-    cursor: pointer;
-    width: 25%;
-    transition: all 0.3s;
-    background-color: transparent;
-    color: var(--color-raisin-black);
-
-    &--1 {
-    }
-    &--2 {
-    }
-    &--3 {
-    }
-    &--4 {
-    }
-    &--active {
-      color: white;
-    }
-  }
-
-  &__tab-content {
-    display: none;
-    font-family: inherit;
-    font-size: 1.8rem;
-    max-width: 70rem;
-    margin: 3rem auto;
-    padding: 4rem;
-    position: relative;
-
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 105%;
-      z-index: -1;
-      opacity: 0.5;
-      transform: scale(1.07, 1.05) skewX(15deg);
-      background-color: white;
-    }
-
-    & > p {
-      display: block;
-      position: relative;
-
-      &:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-
-      &::before {
-        content: "";
-        border: solid var(--color-raisin-black);
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        position: absolute;
-        left: -20px;
-        top: 10px;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-      }
-    }
-
-    &--active {
-      display: block;
     }
   }
 }

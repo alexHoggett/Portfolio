@@ -42,6 +42,10 @@
     visibility: hidden;
     animation-fill-mode: forwards;
 
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+    }
+
     @media only screen and (max-width: $bp-navbar) {
       animation-name: moveInBottom;
       font-size: 2rem;

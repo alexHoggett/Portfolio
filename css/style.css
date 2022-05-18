@@ -111,6 +111,12 @@ p {
   100% {
     transform: scale(1.4); } }
 
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .header {
   position: relative;
   min-height: 100vh; }
@@ -125,6 +131,9 @@ p {
   padding: 10rem 10rem 0rem 10rem;
   transition: transform 1s, opacity 1s;
   color: var(--color-raisin-black); }
+  @media only screen and (max-width: 1000px) {
+    .section {
+      padding: 5rem 2rem 5rem 2rem; } }
   .section--hidden {
     opacity: 0;
     transform: translateY(8rem); }
@@ -160,34 +169,56 @@ p {
       flex-basis: 25%; }
 
 .about-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 4rem; }
-  @media only screen and (max-width: 1264px) {
+  @media only screen and (max-width: 1000px) {
     .about-container {
       flex-direction: column-reverse;
       align-items: center; } }
 
 .about-me__text {
   font-size: 1.7rem;
-  font-weight: 200;
+  font-weight: 300;
   max-width: 40rem;
   margin-right: -5rem;
   z-index: 20; }
+  @media only screen and (max-width: 1000px) {
+    .about-me__text {
+      max-width: 100%; } }
+  @media only screen and (max-width: 800px) {
+    .about-me__text {
+      font-size: 2rem; } }
   .about-me__text > p:not(:last-child) {
     margin-bottom: 10px; }
 
 .about-me__img {
-  width: 60rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
   opacity: 0.6;
   clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
-  transition: all cubic-bezier(1, 0, 0, 1) 0.4s; }
+  transition: all cubic-bezier(1, 0, 0, 1) 0.4s;
+  object-fit: cover; }
   .about-me__img:hover {
     opacity: 1;
     transform: scale(1.05); }
   .about-me__img-container {
-    position: relative; }
+    position: relative;
+    max-width: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 1264px) {
+      .about-me__img-container {
+        width: 100%;
+        margin-left: 3vw; } }
+    @media only screen and (max-width: 1000px) {
+      .about-me__img-container {
+        width: 30rem;
+        margin: 0rem 0rem 3rem 0rem; } }
     .about-me__img-container::before {
       content: "";
       position: absolute;
@@ -233,7 +264,9 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 70vh; }
+  min-height: 70vh;
+  z-index: 1000;
+  position: absolute; }
   .contact > * {
     margin-bottom: 6rem; }
   .contact__title {
@@ -278,6 +311,9 @@ p {
     animation-timing-function: ease-out;
     visibility: hidden;
     animation-fill-mode: forwards; }
+    @media only screen and (max-width: 50em) {
+      .sidebar__item {
+        font-size: 1.8rem; } }
     @media only screen and (max-width: 576px) {
       .sidebar__item {
         animation-name: moveInBottom;
@@ -336,10 +372,12 @@ p {
         align-items: center;
         opacity: 0;
         visibility: hidden;
-        z-index: 12; } }
+        z-index: 12;
+        display: none; } }
     .navbar__list--active {
       opacity: 1;
-      visibility: visible; }
+      visibility: visible;
+      display: flex; }
   .navbar__item {
     display: grid;
     padding: 1rem;
@@ -527,6 +565,10 @@ p {
     .card {
       width: 16rem;
       height: 16rem; } }
+  @media only screen and (max-width: 850px) {
+    .card {
+      width: 15rem;
+      height: 15rem; } }
   @media only screen and (max-width: 674px) {
     .card {
       width: 12rem;
@@ -619,6 +661,13 @@ p {
     transition: all 0.3s;
     background-color: transparent;
     color: var(--color-raisin-black); }
+    @media only screen and (max-width: 1136px) {
+      .timeline__tab {
+        font-size: 2rem;
+        margin: 0rem; } }
+    @media only screen and (max-width: 980px) {
+      .timeline__tab {
+        padding: 0; } }
     .timeline__tab--active {
       color: white; }
   .timeline__tab-content {
@@ -628,7 +677,10 @@ p {
     max-width: 70rem;
     margin: 3rem auto;
     padding: 4rem;
-    position: relative; }
+    position: relative;
+    opacity: 0;
+    transition: all 0.3s;
+    animation: fade; }
     .timeline__tab-content::after {
       display: block;
       content: "";
@@ -658,7 +710,8 @@ p {
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg); }
     .timeline__tab-content--active {
-      display: block; }
+      display: block;
+      opacity: 1; }
 
 .projects {
   margin-top: 5rem;

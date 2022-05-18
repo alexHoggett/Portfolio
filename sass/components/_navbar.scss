@@ -49,11 +49,13 @@
       opacity: 0;
       visibility: hidden;
       z-index: 12;
+      display: none;
     }
 
     &--active {
       opacity: 1;
       visibility: visible;
+      display: flex;
     }
   }
 
