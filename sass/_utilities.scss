@@ -45,3 +45,13 @@
   // To apply to the body to prevent scrolling when the overlay is active
   overflow: hidden;
 }
+
+@mixin clearfix {
+  // hack for floats when there is 0 height
+  // append a pseudo element to the end of the element to clear the floats
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
