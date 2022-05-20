@@ -15,22 +15,22 @@
   transition: all 0.3s;
   z-index: 100;
 
+  @media only screen and (max-width: $bp-navbar) {
+    justify-content: space-between;
+    background-color: transparent;
+    // position: static;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2.2rem;
+  }
+
   &__logo {
     // background-color: white;
     position: relative;
     width: 14rem;
     height: 100%;
     z-index: 20;
-  }
-
-  @media only screen and (max-width: $bp-navbar) {
-    justify-content: space-between;
-    background-color: transparent;
-    position: static;
-  }
-
-  @media only screen and (max-width: 800px) {
-    font-size: 2.2rem;
   }
 
   &__list {
@@ -156,6 +156,7 @@
 
     @media only screen and (max-width: $bp-navbar) {
       display: inline-block;
+      margin-right: 2rem;
     }
 
     &-icon {
