@@ -10,6 +10,7 @@
   color: var(--color-raisin-black);
   line-height: 1.7;
   padding: 5rem;
+  padding-top: 10rem;
   animation-name: moveInBottom;
   animation-duration: 0.8s;
   animation-delay: 1s;
@@ -98,10 +99,12 @@
 
     @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
+      max-width: 60%;
     }
 
     @media only screen and (max-width: 444px) {
       font-size: 1.6rem;
+      max-width: 80%;
     }
   }
 
