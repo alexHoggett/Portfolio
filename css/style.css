@@ -58,18 +58,26 @@ p {
     background-color: var(--color-green);
     opacity: 0.7; }
 
-.icon-3d {
+.icon-3d--light {
   padding: 10px;
   color: #fff; }
-  .icon-3d:hover {
-    -webkit-animation: icon3d 200ms infinite;
-    -moz-animation: icon3d 200ms infinite;
-    animation: icon3d 200ms infinite enlarge 0.3s forwards; }
+  .icon-3d--light:hover {
+    -webkit-animation: icon3d-light 200ms infinite;
+    -moz-animation: icon3d-light 200ms infinite;
+    animation: icon3d-light 200ms infinite enlarge 0.3s forwards; }
+
+.icon-3d--dark {
+  padding: 10px;
+  color: var(--color-raisin-black); }
+  .icon-3d--dark:hover {
+    -webkit-animation: icon3d-dark 200ms infinite;
+    -moz-animation: icon3d-dark 200ms infinite;
+    animation: icon3d-dark 200ms infinite enlarge 0.3s forwards; }
 
 .no-scroll {
   overflow: hidden; }
 
-@keyframes icon3d {
+@keyframes icon3d-light {
   0% {
     text-shadow: 5px 4px var(--color-sunglow), -5px -6px var(--color-blue-green); }
   25% {
@@ -80,6 +88,18 @@ p {
     text-shadow: -8px -4px var(--color-sunglow), -5px -4px var(--color-blue-green); }
   100% {
     text-shadow: -5px 0 var(--color-sunglow), 5px -4px var(--color-blue-green); } }
+
+@keyframes icon3d-dark {
+  0% {
+    text-shadow: 5px 4px red, -5px -6px var(--color-blue-green); }
+  25% {
+    text-shadow: -5px -6px red, 5px 4px var(--color-blue-green); }
+  50% {
+    text-shadow: 5px -4px red, -8px 4px var(--color-blue-green); }
+  75% {
+    text-shadow: -8px -4px red, -5px -4px var(--color-blue-green); }
+  100% {
+    text-shadow: -5px 0 red, 5px -4px var(--color-blue-green); } }
 
 @keyframes moveInTop {
   0% {
@@ -120,7 +140,8 @@ p {
     min-height: 100vh;
     min-width: 100vw;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: -10000; }
 
 .section {
   padding: 10rem 10rem 0rem 10rem;
@@ -186,10 +207,12 @@ p {
   @media only screen and (max-width: 1000px) {
     .about-me__text {
       max-width: 100%;
-      padding: 2rem; } }
+      padding: 2rem;
+      margin-right: 0rem; } }
   @media only screen and (max-width: 800px) {
     .about-me__text {
-      font-size: 2rem; } }
+      font-size: 2rem;
+      padding: 3rem; } }
   .about-me__text > p:not(:last-child) {
     margin-bottom: 10px; }
 
@@ -264,8 +287,8 @@ p {
   justify-content: center;
   align-items: flex-start;
   min-height: 70vh;
-  z-index: 1000;
-  position: absolute; }
+  z-index: 100;
+  padding: 4rem; }
   .contact > * {
     margin-bottom: 6rem; }
   .contact__title {
@@ -274,6 +297,14 @@ p {
   .contact__info {
     font-size: 3rem;
     font-weight: 200; }
+
+.copyright {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 100;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -5rem); }
 
 .sidebar {
   position: fixed;
@@ -293,7 +324,6 @@ p {
     display: block; }
   .sidebar__list {
     height: 100%;
-    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -312,7 +342,7 @@ p {
     animation-fill-mode: forwards; }
     @media only screen and (max-width: 50em) {
       .sidebar__item {
-        font-size: 1.8rem; } }
+        font-size: 1.5rem; } }
     @media only screen and (max-width: 576px) {
       .sidebar__item {
         animation-name: moveInBottom;
@@ -348,7 +378,7 @@ p {
   @media only screen and (max-width: 576px) {
     .navbar {
       justify-content: space-between;
-      background-color: transparent; } }
+      background-color: rgba(var(--color-flame-rgb), 0.8); } }
   @media only screen and (max-width: 800px) {
     .navbar {
       font-size: 2.2rem; } }
@@ -536,7 +566,7 @@ p {
     content: "";
     display: block;
     width: 0px;
-    height: 1px;
+    height: 3px;
     border-radius: 5px;
     position: relative;
     background-color: var(--color-green);
@@ -764,6 +794,22 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   position: relative; }
+  @media only screen and (max-width: 1000px) {
+    .projects {
+      padding: 3rem; } }
+  .projects__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+    z-index: -1000; }
+  .projects__overlay--active {
+    visibility: visible;
+    background-color: var(--color-raisin-black-light);
+    opacity: 0.8;
+    z-index: 1000; }
 
 .project {
   background-color: rgba(255, 255, 255, 0.548);
@@ -773,23 +819,67 @@ p {
   color: var(--color-raisin-black);
   padding: 2rem;
   border-radius: 3px;
-  transition: all 0.3s;
+  transition: all 0.5s;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
   .project > *:not(:last-child) {
     margin-bottom: 2rem; }
-  .project:hover {
-    transform: translateY(-1rem); }
+  .project__modal {
+    position: fixed;
+    width: 80vw;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: var(--color-raisin-black);
+    z-index: 1001;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .project__modal--active {
+      visibility: visible;
+      opacity: 1; }
+    .project__modal__heading {
+      font-size: 5rem;
+      text-align: center; }
+    .project__modal__img {
+      max-width: 80%;
+      margin: 0 auto; }
+    .project__modal__text {
+      font-size: 2rem;
+      font-weight: 100; }
+      .project__modal__text > p:not(:last-child) {
+        margin-bottom: 1rem; }
+    .project__modal__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 2rem; }
+    .project__modal__link {
+      color: var(--color-raisin-black) !important;
+      text-decoration: none; }
   .project__git {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    transition: 0.3s; }
-    .project__git:hover {
-      filter: invert(99%) sepia(3%) saturate(317%) hue-rotate(82deg) brightness(117%) contrast(100%); }
+    top: 0.5rem;
+    right: 0.5rem;
+    transition: 0.3s;
+    text-decoration: none; }
   .project__title {
     font-weight: 800;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    max-width: 90%; }
   .project__description {
     font-weight: 300; }
   .project__tech {

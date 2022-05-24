@@ -32,10 +32,10 @@
                 <!-- <img src="img/eyeLogo.png" alt="logo" class="navbar__logo"> -->
             </div>
             <ul class="navbar__list">
-                <li class="navbar__item navbar__item--1"><a href="#section--1" class="navbar__link icon-3d">About</a></li>
-                <li class="navbar__item navbar__item--2"><a href="#section--2" class="navbar__link icon-3d">Education</a></li>
-                <li class="navbar__item navbar__item--3"><a href="#section--3" class="navbar__link icon-3d">Projects</a></li>
-                <li class="navbar__item navbar__item--4"><a href="#section--4" class="navbar__link icon-3d">Contact</a></li>
+                <li class="navbar__item navbar__item--1"><a href="#section--1" class="navbar__link icon-3d--light">About</a></li>
+                <!-- <li class="navbar__item navbar__item--2"><a href="#section--2" class="navbar__link icon-3d--light">Education</a></li> -->
+                <li class="navbar__item navbar__item--3"><a href="#section--3" class="navbar__link icon-3d--light">Projects</a></li>
+                <li class="navbar__item navbar__item--4"><a href="#section--4" class="navbar__link icon-3d--light">Contact</a></li>
             </ul>
             <div class="navbar__burger">
                 <div class="navbar__burger-icon"></div>
@@ -47,7 +47,7 @@
             <div class="heading__hello">Hello,</div>
             <div class="heading__primary">I'm <span class="highlight highlight--yellow">Alex</span></div>
             <div class="heading__secondary">
-                A Freelance <span class="highlight highlight--yellow">Full Stack</span> Developer<br>Based in London</div>
+                A <span class="highlight highlight--yellow">Full Stack</span> Developer<br>Based in London</div>
             <p class="heading__intro-paragraph">
                 I'm a budding and enthusiastic software developer, looking for interesting projects that have an awareness of their social impact.
             </p>
@@ -57,10 +57,10 @@
         
         <div class="sidebar">
             <ul class="sidebar__list">
-                <li class="sidebar__item sidebar__item--1"><a href="https://twitter.com/AlexHoggett" target="_blank" class="fa fa-twitter fa-2x sidebar__link icon-3d"></a></li>
-                <li class="sidebar__item sidebar__item--2"><a href="https://github.com/alexHoggett" target="_blank" class="fa fa-github fa-2x sidebar__link icon-3d"></a></li>
-                <li class="sidebar__item sidebar__item--3"><a href="https://www.linkedin.com/in/alex-hoggett-7597041b7/" target="_blank" class="fa fa-linkedin fa-2x sidebar__link icon-3d"></a></li>
-                <li class="sidebar__item sidebar__item--4"><a href="#" target="_blank" class="fa fa-envelope fa-2x sidebar__link icon-3d"></a></li>
+                <li class="sidebar__item sidebar__item--1"><a href="https://twitter.com/AlexHoggett" target="_blank" class="fa fa-twitter fa-2x sidebar__link icon-3d--light"></a></li>
+                <li class="sidebar__item sidebar__item--2"><a href="https://github.com/alexHoggett" target="_blank" class="fa fa-github fa-2x sidebar__link icon-3d--light"></a></li>
+                <li class="sidebar__item sidebar__item--3"><a href="https://www.linkedin.com/in/alex-hoggett-7597041b7/" target="_blank" class="fa fa-linkedin fa-2x sidebar__link icon-3d--light"></a></li>
+                <li class="sidebar__item sidebar__item--4"><a href="#" target="_blank" class="fa fa-envelope fa-2x sidebar__link icon-3d--light"></a></li>
             </ul>
         </div>
     </header>
@@ -69,7 +69,8 @@
         <h3 class="section-heading section-heading--start"><span class="highlight highlight--yellow">Me</span></h3>
         <div class="about-container">
             <div class="about-me__text">
-                <p>Hello and welcome, </p>
+                <p>Hello and welcome, my name is Alex, and I’m a creative technologist and software developer, particularly geared towards developing things that are web based. I began coding as teenager with Visual Basic, which makes me a somewhat outdated cliché. My first web app was a teacher-student quiz site, written in PHP for an A-level project, how far I’ve come.</p>
+                <p>I studied Creative Computing at Goldsmiths, University of London, graduating in 2020 with first class honours. My degree saw me focusing on audio-visual programming, with a focus on group and self-led projects. Since graduating, I’ve been working as a teaching assistant at Goldsmiths, whilst also spending my time mastering new technologies I’d like to work with in industry.</p>
             </div>
             <div class="about-me__img-container">
                 <img class="about-me__img" src="./img/me.jpeg" alt="Alex sat on a bench">
@@ -107,7 +108,7 @@
         </div>
     </section>
 
-    <section class="section section--hidden" id="section--2">
+    <!-- <section class="section section--hidden" id="section--2">
         <h3 class="section-heading section-heading--end"><span class="highlight highlight--yellow">Education</span></h3>
 
         <div class="timeline">
@@ -143,71 +144,74 @@
                 </div>
             </div>
         </div>
-
-    </section>
+    </section> -->
 
     <section class="section section--hidden" id="section--3">
         <h3 class="section-heading"><span class="highlight highlight--yellow">Projects</span></h3>
-
         <div class="projects">
-            <div class="project">
-                <img src="img/github.svg" alt="Github logo" class="project__git">
-                <div class="project__title">Natours</div>
-                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
-                <div class="project__tech">
-                    <div class="project__tech-item">CSS</div>
-                    <div class="project__tech-item">HTML</div>
-                    <div class="project__tech-item">SASS</div>
+            <div class="projects__overlay"></div>
+            <div class="project__modal project__modal--1">
+                <h4 class="project__modal__heading">A Crossmodal Music Pedal</h4>
+                <img src="img/Crossmodal-Pedal.jpg" alt="A chain of 3 effects pedals, connected on the floor" class="project__modal__img">
+                <div class="project__modal__text">
+                    <p>For my final year (BSc) Creative Computing project, I designed, built and programmed a digital-effects medal that converts a guitar signal (from a Jack input) into audio-visualisations, to be output via an HDMI channel. This product was intended to be used by musicians in a performance context.</p>
+                    <p>Unfortunately, this project was undertaken during the first wave of the 2020 Covid-19 pandemic, which imposed certain limitations on facilities and support. Despite these drawbacks, a working prototype was still achieved and I gained valuable insight into the development cycle and understood the importance of research and testing when creating a product that is relevant and intuitive.</p>
+                </div>
+                <div class="project__modal__links">
+                    <a href="https://github.com/alexHoggett/CCProj" target="_blank" class="fa fa-github fa-2x icon-3d--dark project__modal__link"></a>
                 </div>
             </div>
-            <div class="project">
-                <img src="img/github.svg" alt="Github logo" class="project__git">
-                <div class="project__title">Natours</div>
-                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
-                <div class="project__tech">
-                    <div class="project__tech-item">CSS</div>
-                    <div class="project__tech-item">HTML</div>
-                    <div class="project__tech-item">SASS</div>
+            <div class="project__modal project__modal--2">
+                <h4 class="project__modal__heading">Chordspotter</h4>
+                <img src="" alt="" class="project__modal__img">
+                <div class="project__modal__text">
+                    <p>Chordspotter, is an application written in C++, using the openFrameworks library, that can record and analyse guitar chords played by the user. The frequency content is extracted using an FFT, the analysis algorithm was written by me, and was aided by the research conducted in:</p>
+                    <p>Chord Identification Using Pitch Class Profile Method with Fast Fourier Transform Feature Extraction, Mulundi, Aristoteles, Loupatty, IJCSI International Journal of Computer Science Issues, Vol. 11, Issue 3, No 1, May 2014.</p>
+                </div>
+                <div class="project__modal__links">
+                    <a href="https://github.com/alexHoggett/ChordSpot" target="_blank" class="fa fa-github fa-2x icon-3d--dark project__modal__link"></a>
                 </div>
             </div>
-            <div class="project">
-                <img src="img/github.svg" alt="Github logo" class="project__git">
-                <div class="project__title">Natours</div>
-                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
-                <div class="project__tech">
-                    <div class="project__tech-item">CSS</div>
-                    <div class="project__tech-item">HTML</div>
-                    <div class="project__tech-item">SASS</div>
+            <div class="project__modal project__modal--3">
+                <h4 class="project__modal__heading">ML Striptease Drumpad</h4>
+                <img src="img/striptease.jpg" alt="Pixellated image of user undressing next to a digital drumpad" class="project__modal__img">
+                <div class="project__modal__text">
+                    <p>Inspired by Hussein Chalayan’s 1998 Spring/Summer Ready to Wear show, I was interested in programming an instrument to speed up in response to a person undressing. I chose to use a drum machine in order to imitate a human heartbeat quickening as someone removes their clothes. The digital drum-pad was trained to react to the webcam feed using machine-learning algorithms, in this instance it reacts to the user removing their clothes.</p>
+                    <p>This project used ‘Wekinator’ software, developed by Dr. Rebecca Fiebrink, I explored cutting-edge computational techniques and investigated their uses in the design of new interactive experiences. Using this software, I was able to experiment by quickly using certain inputs to give specified outputs.</p>
+                </div>
+                <div class="project__modal__links">
+                    <a href="https://github.com/alexHoggett/drumPadStrip" target="_blank" class="fa fa-github fa-2x icon-3d--dark project__modal__link"></a>
                 </div>
             </div>
-            <div class="project">
-                <img src="img/github.svg" alt="Github logo" class="project__git">
-                <div class="project__title">Natours</div>
-                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+
+            <div class="project" data-id="1">
+                <a href="https://github.com/alexHoggett/CCProj" target="_blank" class="fa fa-github fa-2x project__git icon-3d--light"></a>
+                <div class="project__title">A Crossmodal Music Pedal</div>
+                <div class="project__description">An audio-visual physical computing project, that generates live visuals, from the input of a guitar pedal.</div>
                 <div class="project__tech">
-                    <div class="project__tech-item">CSS</div>
-                    <div class="project__tech-item">HTML</div>
-                    <div class="project__tech-item">SASS</div>
+                    <div class="project__tech-item">C++</div>
+                    <div class="project__tech-item">Raspberry-Pi</div>
+                    <div class="project__tech-item">Linux</div>
+                </div>
+                
+            </div>
+            <div class="project" data-id="2">
+                <a href="https://github.com/alexHoggett/ChordSpot" target="_blank" class="fa fa-github fa-2x project__git icon-3d--light"></a>
+                <div class="project__title">Chordspotter</div>
+                <div class="project__description">An openframeworks application that can detect guitar chords.</div>
+                <div class="project__tech">
+                    <div class="project__tech-item">C++</div>
+                    <div class="project__tech-item">openFrameworks</div>
                 </div>
             </div>
-            <div class="project">
-                <img src="img/github.svg" alt="Github logo" class="project__git">
-                <div class="project__title">Natours</div>
-                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
+            <div class="project" data-id="3">
+                <a href="https://github.com/alexHoggett/drumPadStrip" target="_blank" class="fa fa-github fa-2x project__git icon-3d--light"></a>
+                <div class="project__title">Machine Learning Striptease Drumpad</div>
+                <div class="project__description">I trained a model that respnds to webcam footage of a user unclothing.</div>
                 <div class="project__tech">
-                    <div class="project__tech-item">CSS</div>
-                    <div class="project__tech-item">HTML</div>
-                    <div class="project__tech-item">SASS</div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="img/github.svg" alt="Github logo" class="project__git">
-                <div class="project__title">Natours</div>
-                <div class="project__description">Landing page for a nature tours company built using Sass.</div>
-                <div class="project__tech">
-                    <div class="project__tech-item">CSS</div>
-                    <div class="project__tech-item">HTML</div>
-                    <div class="project__tech-item">SASS</div>
+                    <div class="project__tech-item">Javascript</div>
+                    <div class="project__tech-item">C++</div>
+                    <div class="project__tech-item">openFrameworks</div>
                 </div>
             </div>
         </div>
@@ -221,5 +225,9 @@
             <button class="contact__btn btn btn--text">Send me an email</button>
         </div>
     </section>
+    <div class="copyright">
+        Designed and built by Alex Hoggett<br>
+        Using pure Javascript, HTML & CSS(SASS).
+    </div>
 </body>
 </html>

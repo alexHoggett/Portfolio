@@ -20,7 +20,7 @@
 
   &__list {
     height: 100%;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -43,7 +43,7 @@
     animation-fill-mode: forwards;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
 
     @media only screen and (max-width: $bp-navbar) {

@@ -10,6 +10,8 @@ const indicator = document.querySelector('.timeline__tab-indicator');
 const burger = document.querySelector('.navbar__burger');
 const overlay = document.querySelector('.navbar__overlay');
 const sidebar = document.querySelector('.sidebar');
+const projects = document.querySelectorAll('.project');
+const projectsOverlay = document.querySelector('.projects__overlay')
 
 navList.addEventListener('click', function (e) {
     e.preventDefault();
@@ -31,6 +33,30 @@ btnScrollTo.addEventListener('click', function (e) {
     });
 });
 
+const openModal = function(e, id){
+  e.preventDefault();
+  projectsOverlay.classList.add('projects__overlay--active');
+  let modal = document.querySelector(`.project__modal--${id}`);
+  modal.classList.add('project__modal--active');
+  document.body.classList.add('no-scroll');
+}
+
+const closeModal = function(){
+  projectsOverlay.classList.remove('projects__overlay--active');
+  let modals = document.querySelectorAll(`.project__modal`);
+  modals.forEach(modal => {
+    modal.classList.remove('project__modal--active');
+  })
+  document.body.classList.remove('no-scroll');
+}
+
+projectsOverlay.addEventListener('click', closeModal);
+
+projects.forEach(project => {
+  project.addEventListener('click', function(e){
+    if (!e.target.classList.contains('project__git')) openModal(e, project.dataset.id);
+  })
+})
 
 // Functionality for burger
 
@@ -198,3 +224,6 @@ window.addEventListener('scroll', function(){
   }
   lastScrollTop = scrollTop;
 });
+
+
+

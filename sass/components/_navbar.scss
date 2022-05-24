@@ -17,8 +17,7 @@
 
   @media only screen and (max-width: $bp-navbar) {
     justify-content: space-between;
-    background-color: transparent;
-    // position: static;
+    background-color: rgba(var(--color-flame-rgb), 0.8);
   }
 
   @media only screen and (max-width: 800px) {
