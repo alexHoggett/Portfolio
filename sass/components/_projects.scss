@@ -97,6 +97,11 @@
       & > p:not(:last-child){
         margin-bottom: 1rem;
       }
+
+      @media only screen and (max-width: $bp-small) {
+        font-weight: 300;
+        font-size: 1.6rem;
+      }
     }
 
     &__links{

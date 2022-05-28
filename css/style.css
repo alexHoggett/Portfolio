@@ -278,6 +278,9 @@ p {
   font-size: 3.2rem;
   margin-top: 5rem;
   color: var(--color-raisin-black); }
+  @media only screen and (max-width: 400px) {
+    .sub-heading {
+      font-size: 2.8rem; } }
 
 .contact {
   margin-top: 3rem;
@@ -863,6 +866,10 @@ p {
       font-weight: 100; }
       .project__modal__text > p:not(:last-child) {
         margin-bottom: 1rem; }
+      @media only screen and (max-width: 37.5em) {
+        .project__modal__text {
+          font-weight: 300;
+          font-size: 1.6rem; } }
     .project__modal__links {
       display: flex;
       flex-direction: row;
@@ -975,7 +982,8 @@ p {
     @media only screen and (max-width: 37.5em) {
       .heading__intro-paragraph {
         font-size: 1.8rem;
-        max-width: 60%; } }
+        max-width: 60%;
+        font-weight: 300; } }
     @media only screen and (max-width: 444px) {
       .heading__intro-paragraph {
         font-size: 1.6rem;

@@ -196,6 +196,10 @@
   font-size: 3.2rem;
   margin-top: 5rem;
   color: var(--color-raisin-black);
+
+  @media only screen and (max-width: 400px) {
+    font-size: 2.8rem;
+  }
 }
 
 .contact {
