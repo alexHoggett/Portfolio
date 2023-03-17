@@ -45,7 +45,7 @@ function Agent(xPos, yPos, xVel, yVel) {
             // if the other agent is too close
             if (neighbourDist < avoidRadius && neighbourDist > 0) {
                 // push them away from close neighbours
-                let pushVec = p5.Vector.sub(this.pos, neighbour.pos);
+                let pushVec = this.pos.sub(neighbour.pos);
                 pushVec.normalize();
                 avoidVec.add(pushVec);
             }

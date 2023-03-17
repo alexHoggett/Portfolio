@@ -84,6 +84,7 @@
 
     &__img{
       max-width: 80%;
+      max-height: 60%;
       margin: 2rem auto;
 
       @media only screen and (max-width: $bp-medium) {
