@@ -34,6 +34,7 @@ function setup() {
 }
 
 function draw() {
+    // console.log(swarm[0].pos);
     background('#E4572E');
     for (agent of swarm) {
         agent.draw();
