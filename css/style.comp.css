@@ -828,6 +828,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  .project:hover {
+    transform: translateY(-0.7rem); }
   .project > *:not(:last-child) {
     margin-bottom: 2rem; }
   .project__modal {
