@@ -2,7 +2,7 @@
 
 <div align="center" font-size='2'>
   
-  [alexshabibhoggett.xyz](http://www.alexshabibhoggett.xyz)
+  [alexshabibhoggett.xyz](https://www.alexhoggett.xyz/)
   
 </div>
 
