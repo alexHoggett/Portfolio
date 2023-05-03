@@ -26,12 +26,12 @@ navList.addEventListener('click', function (e) {
     }
 });
 
-btnScrollTo.addEventListener('click', function (e) {
-    const section1 = document.querySelector('#section--1');
-    section1.scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+// btnScrollTo.addEventListener('click', function (e) {
+//     const section1 = document.querySelector('#section--1');
+//     section1.scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// });
 
 const openModal = function(e, id){
   e.preventDefault();
