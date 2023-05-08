@@ -375,7 +375,8 @@ p {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   color: var(--color-raisin-black);
-  background-color: rgba(var(--color-flame-rgb), 0.8);
+  background-color: rgba(var(--color-flame-rgb), 0.7);
+  backdrop-filter: blur(10px);
   transition: all 0.3s;
   z-index: 100; }
   @media only screen and (max-width: 576px) {
