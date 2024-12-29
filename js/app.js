@@ -13,6 +13,8 @@ const sidebar = document.querySelector('.sidebar');
 const projects = document.querySelectorAll('.project');
 const projectsOverlay = document.querySelector('.projects__overlay')
 
+const MOBILE_THRESHOLD = 576; // adjust this to match $bp-navbar;
+
 navList.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -39,6 +41,19 @@ const openModal = function(e, id){
   let modal = document.querySelector(`.project__modal--${id}`);
   modal.classList.add('project__modal--active');
   document.body.classList.add('no-scroll');
+}
+
+// Function to handle window going from mobile > desktop so it doesn't break the navbar
+function handleResize() {
+  if (window.innerWidth >= MOBILE_THRESHOLD) {
+    navList.classList.remove('navbar__list--active');
+    
+    burger.classList.remove('navbar__burger--active');
+    overlay.classList.remove('navbar__overlay--active');
+    document.body.classList.remove('no-scroll');
+    navList.classList.remove('navbar__list--active');
+    sidebar.classList.remove('sidebar--active');
+  }
 }
 
 const closeModal = function(){
@@ -123,6 +138,16 @@ tabs.forEach(tab => {
     document.querySelector(`.timeline__tab-content--${tabIndex + 1}`).classList.add('timeline__tab-content--active');
   })
 })
+
+// ///// ///// ///// ///// ///// ///// ///// ///
+// /// Handle window resize
+// ///// ///// ///// ///// ///// ///// ///// ///
+
+// Attach event listener to window resize
+window.addEventListener('resize', handleResize);
+
+// Run on page load to ensure initial state is correct
+handleResize();
 
 
 // ///// ///// ///// ///// ///// ///// ///// ///
